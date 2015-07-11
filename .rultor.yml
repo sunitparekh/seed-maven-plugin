@@ -1,0 +1,9 @@
+decrypt:
+  settings.xml: "/Users/sunit/.gnupg/settings.xml.asc"
+  pubring.gpg: "/Users/sunit/.gnupg/pubring.gpg.asc"
+  secring.gpg: "/Users/sunit/.gnupg/secring.gpg.asc"
+release:
+  script: |
+    mvn versions:set "-DnewVersion=${tag}"
+    git commit -am "${tag}"
+    mvn clean deploy --settings /Users/sunit/.gnupg/settings.xml

@@ -24,6 +24,12 @@
         <url>https://github.com/sunitparekh/seed-maven-plugin.git</url>
     </scm>
 
+    <parent>
+        <groupId>com.jcabi</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.34</version>
+    </parent>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
